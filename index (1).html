@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════
+       SEO META TAGS
+  ═══════════════════════════════════════════ -->
+  <title>Free Social Media ROI Calculator for Small Businesses (2025)</title>
+  <meta name="description" content="Find out if your social media is actually making you money. Free ROI calculator for Instagram, Facebook, TikTok, YouTube, Pinterest, LinkedIn & X. Enter your hours, ad spend, and leads to get your exact return." />
+  <meta name="keywords" content="social media ROI calculator, social media return on investment, is social media worth it, social media marketing ROI, small business social media, instagram ROI, tiktok ROI, youtube ROI, pinterest ROI, facebook ads ROI" />
+  <meta name="author" content="SocialROI.tools" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph (Facebook, LinkedIn shares) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Social Media ROI Calculator — Is Your Social Media Making Money?" />
+  <meta property="og:description" content="Stop guessing. Enter your hours, ad spend and leads to instantly see your real ROI across 7 platforms. Free tool for small business owners." />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Social Media ROI Calculator for Small Businesses" />
+  <meta name="twitter:description" content="Find out if Instagram, TikTok, YouTube or Pinterest is actually making you money. Free calculator — no signup needed." />
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.png" />
+
+  <!-- Structured Data: WebApplication (helps Google show rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Social Media ROI Calculator",
+    "description": "Free calculator that shows small business owners the exact return on investment from their social media efforts across Instagram, Facebook, TikTok, YouTube, Pinterest, LinkedIn, and X.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://yourdomain.com/"
+  }
+  </script>
+
+  <!-- FAQ Structured Data (earns FAQ rich snippets in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate social media ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Social media ROI = (Revenue generated from social media - Total investment) / Total investment × 100. Total investment includes both your time cost (hours × hourly rate) and any paid ad spend. Revenue is calculated from the leads you generate multiplied by your conversion rate and average customer value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good social media ROI for small businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A positive ROI (above 0%) means you're making more than you're spending. A strong ROI is generally considered 100% or more — meaning you're doubling your investment. Most small businesses should aim for at least a 3:1 return (300% ROI) to justify the time and cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which social media platform has the best ROI for small businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your industry. LinkedIn typically delivers the highest conversion rates for B2B businesses. Instagram and TikTok work well for consumer brands and local services. YouTube provides long-term compounding ROI as videos continue generating leads for years. Pinterest is excellent for product-based businesses with high purchase intent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should a small business spend on social media?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most small businesses spend 5–15 hours per week on organic social media, plus $200–$1,000/month on paid ads if applicable. The most important factor isn't how much you spend — it's tracking whether that investment is generating leads and revenue."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       GOOGLE ADSENSE — Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID
+  ═══════════════════════════════════════════ -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --surface2: #f0ede7;
+      --border: #e2ddd6;
+      --text: #1a1916;
+      --text2: #6b6760;
+      --text3: #a09d98;
+      --accent: #2a5c45;
+      --accent-light: #e8f2ed;
+      --accent2: #c84b1f;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── AD SLOTS ── */
+    .ad-slot {
+      background: var(--surface2);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text3);
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .ad-slot-leaderboard { width: 100%; height: 90px; margin: 0 0 2rem; }
+    .ad-slot-rectangle { width: 100%; height: 280px; margin: 2rem 0; }
+    .ad-slot-sidebar { width: 100%; height: 600px; }
+    /* Replace .ad-slot content with real AdSense ins tags when live */
+
+    /* ── HEADER ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .logo span { color: var(--text2); font-style: italic; }
+    nav a {
+      font-size: 14px;
+      color: var(--text2);
+      text-decoration: none;
+      margin-left: 24px;
+      transition: color 0.15s;
+    }
+    nav a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1rem;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 em { color: var(--accent); font-style: italic; }
+    .hero p {
+      font-size: 18px;
+      color: var(--text2);
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--accent);
+      display: block;
+    }
+    .hero-stat .lbl { font-size: 13px; color: var(--text3); }
+
+    /* ── MAIN LAYOUT ── */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      align-items: start;
+      padding: 2rem 0 4rem;
+    }
+    @media (max-width: 768px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ── CALCULATOR CARD ── */
+    .calc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .platform-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .ptab {
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .ptab:hover { background: var(--surface2); color: var(--text); }
+    .ptab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text3);
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+
+    .input-group {
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+      padding: 0.875rem 1rem;
+    }
+    .input-group label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text3);
+      display: block;
+      margin-bottom: 5px;
+    }
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .input-row .pfx {
+      font-size: 14px;
+      color: var(--text3);
+    }
+    .input-row input[type=number] {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      width: 100%;
+    }
+    .input-row input[type=number]::-webkit-inner-spin-button { opacity: 0.3; }
+
+    .slider-block { margin-bottom: 1rem; }
+    .slider-block .slabel {
+      font-size: 13px;
+      color: var(--text2);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .slider-block .slabel strong { color: var(--text); font-weight: 500; }
+    .slider-block input[type=range] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    /* ── RESULTS ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 1.75rem 0;
+    }
+    @media (max-width: 560px) {
+      .grid3, .grid2 { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .r-card {
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+    .r-card .rlbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text3); margin-bottom: 4px; }
+    .r-card .rval { font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.1; }
+    .r-card .rsub { font-size: 11px; color: var(--text3); margin-top: 3px; }
+    .r-card.pos .rval { color: var(--accent); }
+    .r-card.neg .rval { color: var(--accent2); }
+
+    .verdict {
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 1.5rem;
+    }
+    .verdict.good { background: var(--accent-light); border: 1px solid #9ecfb8; }
+    .verdict.bad { background: #fdf0eb; border: 1px solid #f0b59a; }
+    .verdict.neutral { background: var(--surface2); border: 1px solid var(--border); }
+    .verdict .vdot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .verdict.good .vdot { background: var(--accent); }
+    .verdict.bad .vdot { background: var(--accent2); }
+    .verdict.neutral .vdot { background: var(--text3); }
+    .verdict .vtitle { font-weight: 500; font-size: 15px; margin-bottom: 2px; }
+    .verdict.good .vtitle { color: var(--accent); }
+    .verdict.bad .vtitle { color: var(--accent2); }
+    .verdict .vbody { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+    .breakdown {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 0.5rem;
+    }
+    .breakdown th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text3);
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+    .breakdown td { padding: 9px 0; border-top: 1px solid var(--border); color: var(--text2); font-size: 13px; }
+    .breakdown td:last-child { text-align: right; font-weight: 500; color: var(--text); }
+    .breakdown .total td { font-weight: 500; border-top: 2px solid var(--border); color: var(--text); }
+
+    .tip-box {
+      background: var(--surface2);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+    .tip-box strong { color: var(--accent); font-weight: 500; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .sidebar-card h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .sidebar-card p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+    .sidebar-card ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+    .sidebar-card ul li { font-size: 13px; color: var(--text2); margin-bottom: 6px; }
+
+    /* ── ARTICLE / SEO CONTENT ── */
+    .article { padding: 4rem 0; border-top: 1px solid var(--border); }
+    .article h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      color: var(--text);
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+    }
+    .article h2:first-child { margin-top: 0; }
+    .article h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .article p { color: var(--text2); margin-bottom: 1rem; font-size: 15px; line-height: 1.75; }
+    .article strong { color: var(--text); font-weight: 500; }
+
+    .faq-list { margin-top: 1rem; }
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--text3);
+      transition: transform 0.2s;
+    }
+    details[open] > summary::after { content: '−'; }
+    .faq-item p { margin-top: 0.75rem; font-size: 14px; color: var(--text2); line-height: 1.7; margin-bottom: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--text3); }
+    footer a { color: var(--text2); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header>
+  <div class="container-wide">
+    <div class="header-inner">
+      <a class="logo" href="/">SocialROI<span>.tools</span></a>
+      <nav>
+        <a href="#calculator">Calculator</a>
+        <a href="#article">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Free Tool — No Signup Required</div>
+    <h1>Is your social media actually <em>making you money?</em></h1>
+    <p>Stop guessing. Enter your hours, ad spend, and leads to see your exact ROI across 7 platforms — in seconds.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">7</span><span class="lbl">Platforms covered</span></div>
+      <div class="hero-stat"><span class="num">100%</span><span class="lbl">Free, always</span></div>
+      <div class="hero-stat"><span class="num">60s</span><span class="lbl">To get your answer</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="container-wide">
+
+  <!-- AD SLOT: Leaderboard (728×90 desktop / 320×50 mobile) -->
+  <!-- Replace this div with your AdSense ins tag -->
+  <div class="ad-slot ad-slot-leaderboard">Ad — 728×90 Leaderboard</div>
+
+  <!-- ══════════════════════════════════════════
+       MAIN LAYOUT: CALCULATOR + SIDEBAR
+  ══════════════════════════════════════════ -->
+  <div class="main-layout" id="calculator">
+
+    <!-- CALCULATOR -->
+    <div class="calc-card">
+
+      <div class="platform-tabs">
+        <button class="ptab active" onclick="setPlatform('instagram', this)">Instagram</button>
+        <button class="ptab" onclick="setPlatform('facebook', this)">Facebook</button>
+        <button class="ptab" onclick="setPlatform('tiktok', this)">TikTok</button>
+        <button class="ptab" onclick="setPlatform('linkedin', this)">LinkedIn</button>
+        <button class="ptab" onclick="setPlatform('twitter', this)">X / Twitter</button>
+        <button class="ptab" onclick="setPlatform('youtube', this)">YouTube</button>
+        <button class="ptab" onclick="setPlatform('pinterest', this)">Pinterest</button>
+      </div>
+
+      <p class="section-label">Your effort</p>
+      <div class="grid3">
+        <div class="input-group">
+          <label>Hours / week</label>
+          <div class="input-row"><span class="pfx">hr</span><input type="number" id="hours" value="5" min="0" max="80" oninput="calc()"></div>
+        </div>
+        <div class="input-group">
+          <label>Your hourly rate</label>
+          <div class="input-row"><span class="pfx">$</span><input type="number" id="rate" value="50" min="1" max="500" oninput="calc()"></div>
+        </div>
+        <div class="input-group">
+          <label>Monthly ad spend</label>
+          <div class="input-row"><span class="pfx">$</span><input type="number" id="adspend" value="200" min="0" oninput="calc()"></div>
+        </div>
+      </div>
+
+      <p class="section-label">Your results</p>
+      <div class="grid2">
+        <div class="input-group">
+          <label>Monthly followers gained</label>
+          <div class="input-row"><span class="pfx">#</span><input type="number" id="followers" value="150" min="0" oninput="calc()"></div>
+        </div>
+        <div class="input-group">
+          <label>Monthly leads / inquiries</label>
+          <div class="input-row"><span class="pfx">#</span><input type="number" id="leads" value="12" min="0" oninput="calc()"></div>
+        </div>
+      </div>
+
+      <div class="slider-block">
+        <div class="slabel"><span>Lead-to-customer conversion rate</span><strong id="conv-label">15%</strong></div>
+        <input type="range" min="1" max="60" step="1" value="15" id="conv" oninput="syncConv()">
+      </div>
+      <div class="slider-block">
+        <div class="slabel"><span>Average customer lifetime value</span><strong id="ltv-label">$300</strong></div>
+        <input type="range" min="10" max="5000" step="10" value="300" id="ltv" oninput="syncLtv()">
+      </div>
+
+      <!-- RESULTS -->
+      <div class="results-grid">
+        <div class="r-card"><div class="rlbl">Monthly cost</div><div class="rval" id="r-cost">—</div><div class="rsub">time + ads</div></div>
+        <div class="r-card"><div class="rlbl">Revenue generated</div><div class="rval" id="r-rev">—</div><div class="rsub">from leads closed</div></div>
+        <div class="r-card"><div class="rlbl">Net ROI</div><div class="rval" id="r-roi">—</div><div class="rsub">return on investment</div></div>
+        <div class="r-card"><div class="rlbl">Cost per lead</div><div class="rval" id="r-cpl">—</div><div class="rsub">this platform</div></div>
+      </div>
+
+      <!-- VERDICT -->
+      <div class="verdict neutral" id="verdict">
+        <div class="vdot"></div>
+        <div>
+          <div class="vtitle" id="v-title">Enter your numbers above</div>
+          <div class="vbody" id="v-body">Fill in your effort and results to see your ROI verdict.</div>
+        </div>
+      </div>
+
+      <!-- BREAKDOWN TABLE -->
+      <table class="breakdown">
+        <tr><th>Item</th><th style="text-align:right">Amount</th></tr>
+        <tr><td>Time cost (<span id="b-hours">5</span> hrs/wk × 4.3 wks × $<span id="b-rate">50</span>/hr)</td><td id="b-time">—</td></tr>
+        <tr><td>Ad spend</td><td id="b-ads">—</td></tr>
+        <tr class="total"><td>Total monthly investment</td><td id="b-total">—</td></tr>
+        <tr><td>Revenue from closed leads</td><td id="b-revenue" style="color:var(--accent)">—</td></tr>
+        <tr class="total"><td>Net profit / loss</td><td id="b-net">—</td></tr>
+      </table>
+
+      <!-- PLATFORM TIP -->
+      <div class="tip-box" id="tip-box">
+        <strong>Tip:</strong> <span id="tip-text">Select a platform to get specific optimization advice.</span>
+      </div>
+
+    </div><!-- /calc-card -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- AD SLOT: Rectangle (300×600) -->
+      <!-- Replace this div with your AdSense ins tag -->
+      <div class="ad-slot ad-slot-sidebar">Ad — 300×600 Half Page</div>
+
+      <div class="sidebar-card">
+        <h3>Why track ROI?</h3>
+        <p>Most small businesses spend 10–20 hours/week on social media without ever knowing if it's profitable. This calculator shows you the truth in 60 seconds.</p>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Platform benchmarks</h3>
+        <ul>
+          <li><strong>LinkedIn:</strong> Highest conversion rates (~15–20%)</li>
+          <li><strong>Instagram:</strong> Best for local discovery</li>
+          <li><strong>YouTube:</strong> Longest content lifespan</li>
+          <li><strong>TikTok:</strong> Fastest organic reach</li>
+          <li><strong>Pinterest:</strong> Highest purchase intent</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div><!-- /main-layout -->
+
+  <!-- AD SLOT: In-content Rectangle (728×90 or 336×280) -->
+  <!-- Replace this div with your AdSense ins tag -->
+  <div class="ad-slot ad-slot-rectangle">Ad — 336×280 Rectangle</div>
+
+</div><!-- /container-wide -->
+
+<!-- ══════════════════════════════════════════
+     SEO ARTICLE CONTENT
+══════════════════════════════════════════ -->
+<section class="article" id="article">
+  <div class="container">
+
+    <h2>How to calculate social media ROI for your small business</h2>
+    <p>Social media ROI measures how much revenue your social media activities generate compared to how much they cost. The formula is simple: <strong>(Revenue − Investment) ÷ Investment × 100</strong>. But most small business owners skip one critical input — the cost of their own time.</p>
+    <p>If you spend 10 hours per week on social media and your time is worth $50/hour, that's $2,150/month in hidden cost — before you spend a single dollar on ads. Our calculator factors this in automatically, giving you a true picture of what your social media is actually costing you.</p>
+
+    <h3>The social media ROI formula explained</h3>
+    <p><strong>Total investment</strong> = (Hours per week × 4.3 weeks × hourly rate) + monthly ad spend<br>
+    <strong>Revenue generated</strong> = Monthly leads × conversion rate × average customer lifetime value<br>
+    <strong>Net ROI</strong> = (Revenue − Investment) ÷ Investment × 100</p>
+    <p>A result above 0% means you're making money. A result above 100% means you're doubling your investment. Most profitable small business social strategies deliver 200–500% ROI when measured correctly.</p>
+
+    <h3>Which platform delivers the best ROI?</h3>
+    <p><strong>YouTube</strong> is the only platform where your content compounds over time. A well-optimized video can continue generating leads for 3–5 years, making the true ROI much higher than monthly numbers suggest.</p>
+    <p><strong>LinkedIn</strong> delivers the highest conversion rates for service-based and B2B businesses, typically 2–3× better than other platforms. However, content takes more time to produce.</p>
+    <p><strong>Pinterest</strong> drives the highest purchase-intent traffic for product-based businesses. Users come to Pinterest actively looking to buy, which translates to higher conversion rates than discovery-focused platforms like TikTok.</p>
+    <p><strong>TikTok and Instagram Reels</strong> offer the fastest organic reach with the lowest barrier to entry. Short-form video has become the most cost-effective way for local businesses to reach new audiences without ad spend.</p>
+
+    <h3>Signs your social media ROI is negative (and what to do)</h3>
+    <p>If your calculator shows a negative ROI, it doesn't always mean you should quit social media. It often means one of three things: your leads aren't converting (a sales process issue), your average order value is too low to justify the investment, or you're spending time on the wrong platform for your audience.</p>
+    <p>The fix: reduce time spent creating content by batching posts once per week, focus on one platform instead of spreading thin across five, and track every lead back to its source so you know what's actually working.</p>
+
+    <!-- AD SLOT: Mid-article -->
+    <!-- Replace this div with your AdSense ins tag -->
+    <div class="ad-slot ad-slot-rectangle" style="margin: 2.5rem 0;">Ad — 728×90 In-Article</div>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How do I calculate social media ROI?</summary>
+        <p>Use the formula: (Revenue generated − Total investment) ÷ Total investment × 100. Total investment includes your time cost (hours × hourly rate) plus any paid ad spend. Revenue comes from leads converted to customers multiplied by their lifetime value. Our calculator does all of this automatically.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a good ROI for social media marketing?</summary>
+        <p>Any positive ROI (above 0%) means you're profitable. A strong ROI is generally 100% or more, meaning you're doubling your investment. Top-performing small businesses typically see 300–500% ROI from social media when time is tracked properly and leads are attributed correctly.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Should I include my time as a cost?</summary>
+        <p>Absolutely. Your time has real monetary value. If you could spend that same time on billable work or other revenue-generating activities, then every hour on social media has an opportunity cost. Using your hourly rate (or what you'd pay someone else to do it) gives you the most accurate ROI picture.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I know which social media leads come from which platform?</summary>
+        <p>The most reliable method is to simply ask new customers how they found you. For website traffic, use UTM parameters on all links in your social bios and posts. Google Analytics 4 can then attribute form fills and purchases to specific platforms. For in-person businesses, ask at point of sale.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is social media worth it for a small business?</summary>
+        <p>It depends entirely on your numbers. For some businesses — especially local services, restaurants, and product sellers — social media is their primary growth channel with exceptional ROI. For others, the time investment outweighs the returns and they'd be better off with email marketing, SEO, or referrals. This calculator exists to give you that answer for your specific situation.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much should a small business spend on social media ads?</summary>
+        <p>There's no universal answer, but a common starting point is $5–20/day per platform to gather meaningful data. The key is to calculate your cost per lead and compare it to the lifetime value of a customer. If a customer is worth $500 and you can acquire one for $50 in ad spend, your economics are very strong. If acquisition costs exceed customer value, reduce spend or improve targeting.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER AD + FOOTER
+══════════════════════════════════════════ -->
+<div class="container">
+  <!-- AD SLOT: Footer Leaderboard -->
+  <!-- Replace this div with your AdSense ins tag -->
+  <div class="ad-slot ad-slot-leaderboard" style="margin-bottom:0;">Ad — 728×90 Footer</div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2025 SocialROI.tools — Free social media tools for small businesses.&nbsp;&nbsp;
+      <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a>
+    </p>
+    <p style="margin-top:8px;">This tool is for estimation purposes. Results depend on your specific business and market conditions.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     CALCULATOR JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+  let platform = 'instagram';
+
+  const platforms = {
+    instagram: { label: 'Instagram', tip: 'Reels get 3× more reach than static posts. Post 3–4x/week and use local hashtags to attract nearby customers. Your bio link is your only clickable link — make it count with a simple landing page.' },
+    facebook:  { label: 'Facebook',  tip: 'Facebook Groups and local community posts drive high-intent leads. Paid ads offer the most precise demographic targeting of any platform — even $5/day can generate leads for local businesses.' },
+    tiktok:    { label: 'TikTok',    tip: 'TikTok rewards consistency over perfection. Posting 1 video/day for 30 days outperforms sporadic polished content. Hook viewers in the first 2 seconds — the algorithm judges based on watch time.' },
+    linkedin:  { label: 'LinkedIn',  tip: 'LinkedIn leads convert at 2–3× the rate of other platforms. Text-only posts often outperform images. Comment meaningfully on posts by potential customers before publishing your own content.' },
+    twitter:   { label: 'X / Twitter', tip: 'Threads and strategic replies to larger accounts build reach fast. X is best for thought leadership and driving traffic to a website or lead magnet. Consistency of 3–5 posts/day matters.' },
+    youtube:   { label: 'YouTube',   tip: 'YouTube has the best long-term ROI of any platform — a single video can generate leads for years. Focus on searchable "how-to" titles that directly answer customer questions. Optimize your thumbnail above all else.' },
+    pinterest: { label: 'Pinterest', tip: 'Pinterest drives the highest purchase-intent traffic. Vertical 2:3 ratio images with bold text overlays perform best. Keyword-rich pin descriptions and board titles are crucial for search visibility. Consistency of 10–15 pins/week compounds over time.' }
+  };
+
+  function setPlatform(p, el) {
+    platform = p;
+    document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    calc();
+  }
+
+  function fmt(n)    { return '$' + Math.round(n).toLocaleString(); }
+  function fmtPct(n) { return (n >= 0 ? '+' : '') + Math.round(n) + '%'; }
+
+  function syncConv() {
+    document.getElementById('conv-label').textContent = document.getElementById('conv').value + '%';
+    calc();
+  }
+  function syncLtv() {
+    document.getElementById('ltv-label').textContent = '$' + Number(document.getElementById('ltv').value).toLocaleString();
+    calc();
+  }
+
+  function calc() {
+    const hours   = parseFloat(document.getElementById('hours').value)   || 0;
+    const rate    = parseFloat(document.getElementById('rate').value)     || 0;
+    const adspend = parseFloat(document.getElementById('adspend').value)  || 0;
+    const leads   = parseFloat(document.getElementById('leads').value)    || 0;
+    const conv    = parseFloat(document.getElementById('conv').value)     || 0;
+    const ltv     = parseFloat(document.getElementById('ltv').value)      || 0;
+
+    const timeCost   = hours * 4.3 * rate;
+    const totalCost  = timeCost + adspend;
+    const customers  = leads * (conv / 100);
+    const revenue    = customers * ltv;
+    const net        = revenue - totalCost;
+    const roi        = totalCost > 0 ? ((revenue - totalCost) / totalCost * 100) : 0;
+    const cpl        = leads > 0 ? totalCost / leads : 0;
+
+    document.getElementById('r-cost').textContent = fmt(totalCost);
+    document.getElementById('r-rev').textContent  = fmt(revenue);
+
+    const roiEl = document.getElementById('r-roi');
+    roiEl.textContent = fmtPct(roi);
+    const roiCard = roiEl.closest('.r-card');
+    roiCard.className = 'r-card' + (roi >= 0 ? ' pos' : ' neg');
+
+    document.getElementById('r-cpl').textContent = fmt(cpl);
+
+    document.getElementById('b-hours').textContent   = hours;
+    document.getElementById('b-rate').textContent    = rate;
+    document.getElementById('b-time').textContent    = fmt(timeCost);
+    document.getElementById('b-ads').textContent     = fmt(adspend);
+    document.getElementById('b-total').textContent   = fmt(totalCost);
+    document.getElementById('b-revenue').textContent = fmt(revenue);
+    document.getElementById('b-net').textContent     = fmt(net);
+    document.getElementById('b-net').style.color     = net >= 0 ? 'var(--accent)' : 'var(--accent2)';
+
+    const v    = document.getElementById('verdict');
+    const vtitle = document.getElementById('v-title');
+    const vbody  = document.getElementById('v-body');
+    const pb     = platforms[platform];
+
+    if (totalCost === 0) {
+      v.className = 'verdict neutral';
+      vtitle.textContent = 'Enter your numbers above';
+      vbody.textContent  = 'Fill in your effort and results to see your ROI verdict.';
+    } else if (roi >= 100) {
+      v.className = 'verdict good';
+      vtitle.textContent = 'Strong ROI — ' + pb.label + ' is working for you';
+      vbody.textContent  = 'You\'re earning ' + fmtPct(roi) + ' return. Every dollar invested returns ' + (revenue / totalCost).toFixed(1) + '×. Consider scaling your ad spend or time investment to grow faster.';
+    } else if (roi >= 0) {
+      v.className = 'verdict neutral';
+      vtitle.textContent = 'Breaking even — room to improve';
+      vbody.textContent  = 'You\'re covering costs but not yet generating meaningful profit. Improving your conversion rate by even 5% or increasing your average order value could flip this into strong positive ROI.';
+    } else {
+      v.className = 'verdict bad';
+      vtitle.textContent = 'Negative ROI — this channel is costing you';
+      vbody.textContent  = 'You\'re losing ' + fmt(Math.abs(net)) + '/month on ' + pb.label + '. Consider reducing time spent, consolidating to fewer posts, or focusing on improving your sales conversion process before increasing content output.';
+    }
+
+    document.getElementById('tip-text').textContent = platforms[platform].tip;
+  }
+
+  calc();
+</script>
+
+</body>
+</html>
