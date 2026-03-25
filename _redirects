@@ -1,0 +1,9 @@
+# Clean URLs — removes .html from blog post URLs
+/blog/how-to-calculate-social-media-roi    /blog/how-to-calculate-social-media-roi.html    200
+/blog/instagram-roi-small-business         /blog/instagram-roi-small-business.html         200
+/blog/tiktok-vs-instagram-roi              /blog/tiktok-vs-instagram-roi.html              200
+/blog/youtube-roi-small-business           /blog/youtube-roi-small-business.html           200
+/blog/pinterest-roi-small-business         /blog/pinterest-roi-small-business.html         200
+
+# Redirect old/missing pages to home
+/*    /index.html    404

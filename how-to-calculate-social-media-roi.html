@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Calculate Social Media ROI for Small Businesses (2025 Guide)</title>
+  <meta name="description" content="Step-by-step guide to calculating your true social media ROI. Learn the exact formula, what to measure, and how to know if your time and ad spend are profitable. Includes free calculator." />
+  <link rel="canonical" href="https://socialroi.tools/blog/how-to-calculate-social-media-roi" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Calculate Social Media ROI for Small Businesses" />
+  <meta property="og:description" content="The exact formula small business owners use to find out if social media is making or losing them money." />
+  <meta property="og:url" content="https://socialroi.tools/blog/how-to-calculate-social-media-roi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"How to Calculate Social Media ROI for Small Businesses",
+    "author":{"@type":"Organization","name":"SocialROI.tools"},
+    "publisher":{"@type":"Organization","name":"SocialROI.tools","url":"https://socialroi.tools"},
+    "datePublished":"2025-01-15","dateModified":"2025-01-15",
+    "mainEntityOfPage":"https://socialroi.tools/blog/how-to-calculate-social-media-roi"
+  }</script>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is a good social media ROI?","acceptedAnswer":{"@type":"Answer","text":"Any positive ROI is good. A strong ROI is 100% or more (doubling your investment). Top small businesses see 200–500% ROI when they track time costs accurately."}},
+      {"@type":"Question","name":"How do you measure social media ROI without sales?","acceptedAnswer":{"@type":"Answer","text":"Track leading indicators: leads generated, email signups, DM inquiries, website clicks from bio links, and follower growth rate. Assign an estimated value to each lead based on your typical close rate and deal size."}}
+    ]
+  }</script>
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f7f5f0; --surface: #ffffff; --surface2: #f0ede7;
+    --border: #e2ddd6; --text: #1a1916; --text2: #6b6760; --text3: #a09d98;
+    --accent: #2a5c45; --accent-light: #e8f2ed; --accent2: #c84b1f;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* AD SLOTS */
+  .ad-slot { background: var(--surface2); border: 1px dashed var(--border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--text3); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+  .ad-leaderboard { width:100%; height:90px; margin:0 0 2rem; }
+  .ad-rectangle { width:100%; height:280px; margin:2rem 0; }
+  .ad-sidebar { width:100%; height:600px; }
+
+  /* HEADER */
+  header { background:var(--surface); border-bottom:1px solid var(--border); padding:16px 0; position:sticky; top:0; z-index:100; }
+  .header-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .logo { font-family:var(--font-display); font-size:20px; color:var(--accent); text-decoration:none; }
+  .logo span { color:var(--text2); font-style:italic; }
+  nav { display:flex; flex-wrap:wrap; gap:4px; }
+  nav a { font-size:13px; color:var(--text2); text-decoration:none; padding:5px 10px; border-radius:20px; transition:all .15s; }
+  nav a:hover { background:var(--surface2); color:var(--text); }
+  nav a.active { background:var(--accent-light); color:var(--accent); }
+
+  /* BREADCRUMB */
+  .breadcrumb { padding:12px 0; font-size:13px; color:var(--text3); }
+  .breadcrumb a { color:var(--text2); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--accent); }
+  .breadcrumb span { margin:0 6px; }
+
+  /* ARTICLE LAYOUT */
+  .article-layout { display:grid; grid-template-columns:1fr 300px; gap:2rem; align-items:start; padding:2rem 0 4rem; }
+  @media(max-width:768px){ .article-layout{ grid-template-columns:1fr; } .sidebar{ display:none; } }
+  .article-body h1 { font-family:var(--font-display); font-size:clamp(28px,4vw,44px); line-height:1.15; margin-bottom:1rem; }
+  .article-body h1 em { color:var(--accent); font-style:italic; }
+  .article-body .meta { font-size:13px; color:var(--text3); margin-bottom:1.5rem; }
+  .article-body h2 { font-family:var(--font-display); font-size:clamp(22px,3vw,30px); margin:2.5rem 0 .75rem; color:var(--text); }
+  .article-body h3 { font-family:var(--font-display); font-size:20px; margin:1.75rem 0 .5rem; color:var(--text); }
+  .article-body p { color:var(--text2); margin-bottom:1rem; font-size:15px; line-height:1.8; }
+  .article-body strong { color:var(--text); font-weight:500; }
+  .article-body ul, .article-body ol { padding-left:1.5rem; margin-bottom:1rem; }
+  .article-body li { color:var(--text2); font-size:15px; margin-bottom:.4rem; line-height:1.7; }
+  .article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-light); transition:border-color .15s; }
+  .article-body a:hover { border-color:var(--accent); }
+
+  /* CALLOUT BOX */
+  .callout { background:var(--accent-light); border-left:3px solid var(--accent); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:1rem 1.25rem; margin:1.5rem 0; font-size:14px; color:var(--text); line-height:1.6; }
+  .callout strong { color:var(--accent); }
+
+  /* STAT GRID */
+  .stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:1.5rem 0; }
+  @media(max-width:500px){ .stat-grid{ grid-template-columns:1fr 1fr; } }
+  .stat-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; text-align:center; }
+  .stat-card .sval { font-family:var(--font-display); font-size:28px; color:var(--accent); display:block; }
+  .stat-card .slbl { font-size:12px; color:var(--text3); }
+
+  /* COMPARISON TABLE */
+  .comp-table { width:100%; border-collapse:collapse; font-size:14px; margin:1.5rem 0; }
+  .comp-table th { background:var(--accent); color:#fff; padding:10px 14px; text-align:left; font-weight:500; font-size:13px; }
+  .comp-table td { padding:9px 14px; border-bottom:1px solid var(--border); color:var(--text2); }
+  .comp-table tr:nth-child(even) td { background:var(--surface2); }
+  .comp-table td:first-child { font-weight:500; color:var(--text); }
+
+  /* CTA BANNER */
+  .cta-banner { background:var(--accent); border-radius:var(--radius); padding:2rem; margin:2rem 0; text-align:center; }
+  .cta-banner h3 { font-family:var(--font-display); font-size:24px; color:#fff; margin-bottom:.5rem; }
+  .cta-banner p { color:#a8d5c0; font-size:14px; margin-bottom:1.25rem; }
+  .cta-btn { display:inline-block; background:#fff; color:var(--accent); font-size:14px; font-weight:500; padding:11px 24px; border-radius:24px; text-decoration:none; transition:opacity .15s; }
+  .cta-btn:hover { opacity:.9; border-bottom:none; }
+
+  /* FAQ */
+  .faq-list { margin:1rem 0; }
+  .faq-item { border-top:1px solid var(--border); }
+  .faq-item:last-child { border-bottom:1px solid var(--border); }
+  details summary { font-size:15px; font-weight:500; color:var(--text); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; padding:1.1rem 0; }
+  details summary::after { content:'+'; font-size:20px; color:var(--text3); }
+  details[open] summary::after { content:'−'; }
+  details p { font-size:14px; color:var(--text2); line-height:1.7; padding-bottom:1rem; margin-bottom:0; }
+
+  /* SIDEBAR */
+  .sidebar { display:flex; flex-direction:column; gap:1.5rem; }
+  .sidebar-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; }
+  .sidebar-card h3 { font-family:var(--font-display); font-size:17px; margin-bottom:.75rem; color:var(--text); }
+  .sidebar-card p { font-size:13px; color:var(--text2); line-height:1.6; margin-bottom:.5rem; }
+  .sidebar-card ul { padding-left:1.1rem; }
+  .sidebar-card li { font-size:13px; color:var(--text2); margin-bottom:5px; }
+  .sidebar-card a { color:var(--accent); text-decoration:none; font-size:13px; }
+  .sidebar-card a:hover { text-decoration:underline; }
+
+  /* RELATED POSTS */
+  .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:1.5rem 0; }
+  .related-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem 1.1rem; text-decoration:none; transition:border-color .15s; display:block; }
+  .related-card:hover { border-color:var(--accent); }
+  .related-card .rtag { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); font-weight:500; margin-bottom:6px; }
+  .related-card .rtitle { font-size:14px; font-weight:500; color:var(--text); line-height:1.4; }
+
+  /* FOOTER */
+  footer { background:var(--surface); border-top:1px solid var(--border); padding:2rem 0; text-align:center; }
+  footer p { font-size:13px; color:var(--text3); }
+  footer a { color:var(--text2); text-decoration:none; }
+  footer a:hover { color:var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <div class="header-inner">
+      <a class="logo" href="/">SocialROI<span>.tools</span></a>
+      <nav>
+        <a href="/" >Calculator</a>
+        <a href="/blog/how-to-calculate-social-media-roi" class="active">How It Works</a>
+        <a href="/blog/instagram-roi-small-business" >Instagram</a>
+        <a href="/blog/tiktok-vs-instagram-roi" >TikTok vs Instagram</a>
+        <a href="/blog/youtube-roi-small-business" >YouTube</a>
+        <a href="/blog/pinterest-roi-small-business" >Pinterest</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="container-wide">
+  <div class="ad-slot ad-leaderboard">728×90 Leaderboard</div>
+  <div class="article-layout">
+    <main class="article-body">
+      <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog/how-to-calculate-social-media-roi">How to Calculate Social Media ROI</a></div>
+      <h1>How to calculate social media ROI for <em>small businesses</em></h1>
+      <p class="meta">By SocialROI.tools · Updated January 2025 · 8 min read</p>
+
+      <p>Most small business owners spend 10–20 hours a week on social media without ever knowing if it's profitable. They track followers, likes, and reach — but none of those numbers pay the bills. This guide shows you the exact method to calculate your real return, including the cost most people forget: their own time.</p>
+
+      <div class="callout"><strong>Skip the reading?</strong> Use our <a href="/">free social media ROI calculator</a> to get your answer in 60 seconds — no signup required.</div>
+
+      <h2>The social media ROI formula</h2>
+      <p>The formula is straightforward:</p>
+      <p><strong>ROI = (Revenue generated − Total investment) ÷ Total investment × 100</strong></p>
+      <p>The result is a percentage. A 0% ROI means you broke even. A 100% ROI means you doubled your money. Negative ROI means the platform is costing you more than it earns.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><span class="sval">0%</span><span class="slbl">Break even</span></div>
+        <div class="stat-card"><span class="sval">100%+</span><span class="slbl">Strong ROI</span></div>
+        <div class="stat-card"><span class="sval">300%</span><span class="slbl">Target for most businesses</span></div>
+      </div>
+
+      <h2>Step 1: Calculate your total investment</h2>
+      <p>Your investment has two parts — and most people only count one of them.</p>
+      <h3>Time cost (the one everyone forgets)</h3>
+      <p>Every hour you spend on social media has a real dollar value. If you could be doing billable work, serving customers, or running any other part of your business instead, that time has an opportunity cost.</p>
+      <p><strong>Time cost formula:</strong> Hours per week × 4.3 weeks × your hourly rate</p>
+      <p>Example: 8 hours/week × 4.3 × $50/hour = <strong>$1,720/month</strong> in time cost alone — before spending a dollar on ads.</p>
+      <h3>Ad spend</h3>
+      <p>Add any paid promotion you run on the platform: boosted posts, paid ads, sponsored content. Include only what you spend on that specific platform.</p>
+      <p><strong>Total investment = time cost + ad spend</strong></p>
+
+      <h2>Step 2: Calculate revenue generated</h2>
+      <p>This is where most tracking falls apart. You need a direct line from social media activity to money in the bank.</p>
+      <h3>Track leads, not vanity metrics</h3>
+      <p>Count every inquiry, DM, form fill, phone call, or email that came from social media this month. This is your lead count.</p>
+      <h3>Apply your conversion rate</h3>
+      <p>What percentage of leads become paying customers? If you close 1 in 5 inquiries, that's a 20% conversion rate. Apply this to your lead count to get customers acquired.</p>
+      <h3>Multiply by customer lifetime value</h3>
+      <p>Don't just use the value of the first sale. How much does a typical customer spend with you over their lifetime? A customer who buys once for $100 is very different from one who becomes a $500/year recurring client.</p>
+      <p><strong>Revenue = leads × conversion rate × customer lifetime value</strong></p>
+
+      <div class="ad-slot ad-rectangle">336×280 In-Article Ad</div>
+
+      <h2>Step 3: Calculate and interpret your ROI</h2>
+      <p>Plug your numbers into the formula: (Revenue − Investment) ÷ Investment × 100.</p>
+      <p>Here's how to interpret the result:</p>
+      <table class="comp-table">
+        <tr><th>ROI Result</th><th>What It Means</th><th>What To Do</th></tr>
+        <tr><td>Above 200%</td><td>This platform is working well</td><td>Scale up — more time or ad spend</td></tr>
+        <tr><td>0% to 200%</td><td>Marginally profitable</td><td>Optimize conversion rate first</td></tr>
+        <tr><td>Negative</td><td>Losing money</td><td>Reduce time or shift platforms</td></tr>
+      </table>
+
+      <h2>The hidden cost: platform switching</h2>
+      <p>One of the biggest ROI killers for small businesses is spreading effort across too many platforms. Every platform you add multiplies your time cost. A business posting on Instagram, Facebook, TikTok, LinkedIn, and Pinterest simultaneously may be spending $3,000+/month in time cost alone.</p>
+      <p>The math almost always favors going deep on one or two platforms rather than shallow on five. Use our <a href="/">calculator</a> to run the numbers for each platform separately and compare them side by side.</p>
+
+      <h2>How to track social media leads accurately</h2>
+      <p>The easiest method for most small businesses is simply asking. When a new customer contacts you, ask: "How did you hear about us?" Keep a simple tally sheet.</p>
+      <p>For website-based businesses, use UTM parameters on every link in your social bios. A UTM link looks like: <strong>yoursite.com?utm_source=instagram&utm_medium=bio</strong>. Google Analytics 4 will then show you exactly how many visitors and conversions came from each platform.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>What is a good social media ROI?</summary><p>Any positive ROI (above 0%) means you're profitable. A strong ROI is 100% or more — doubling your investment. Top small businesses typically see 200–500% ROI when they track time costs accurately and attribute leads correctly.</p></details>
+        <details class="faq-item"><summary>How do you measure social media ROI without direct sales?</summary><p>Track leading indicators: leads generated, email signups, DM inquiries, website clicks, and follower growth. Assign an estimated value to each lead based on your typical close rate and average deal size. Even an approximation is more useful than tracking likes.</p></details>
+        <details class="faq-item"><summary>Should I include my own time as a cost?</summary><p>Absolutely. Your time is your most valuable resource. If you could use those hours on billable work, customer service, or other revenue activities, it has a real opportunity cost. Using your effective hourly rate gives you the most accurate ROI picture.</p></details>
+        <details class="faq-item"><summary>How often should I calculate my social media ROI?</summary><p>Monthly is ideal for most small businesses. Monthly tracking catches problems early before you've wasted too much time on a platform that isn't working.</p></details>
+      </div>
+
+      <div class="cta-banner">
+        <h3>Calculate your ROI right now</h3>
+        <p>Enter your numbers and get your answer in 60 seconds — free, no signup.</p>
+        <a href="/" class="cta-btn">Use the free calculator →</a>
+      </div>
+
+      <h2>Related guides</h2>
+      <div class="related-grid"><a class="related-card" href="/blog/instagram-roi-small-business"><div class="rtag">Instagram</div><div class="rtitle">Instagram ROI for small businesses</div></a>
+<a class="related-card" href="/blog/tiktok-vs-instagram-roi"><div class="rtag">Comparison</div><div class="rtitle">TikTok vs Instagram ROI</div></a>
+<a class="related-card" href="/blog/youtube-roi-small-business"><div class="rtag">YouTube</div><div class="rtitle">YouTube ROI for small businesses</div></a>
+<a class="related-card" href="/blog/pinterest-roi-small-business"><div class="rtag">Pinterest</div><div class="rtitle">Pinterest ROI for small businesses</div></a></div>
+    </main>
+    <aside class="sidebar">
+      <div class="ad-slot ad-sidebar">300×600 Half Page</div>
+      <div class="sidebar-card">
+        <h3>Free ROI calculator</h3>
+        <p>Enter your hours, ad spend, and leads to instantly see your ROI across 7 platforms.</p>
+        <a href="/">Try the calculator →</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Related guides</h3>
+        <ul>
+          <li><a href="/blog/instagram-roi-small-business">Instagram ROI guide</a></li>
+          <li><a href="/blog/tiktok-vs-instagram-roi">TikTok vs Instagram ROI</a></li>
+          <li><a href="/blog/youtube-roi-small-business">YouTube ROI guide</a></li>
+          <li><a href="/blog/pinterest-roi-small-business">Pinterest ROI guide</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2025 SocialROI.tools — Free social media tools for small businesses.&nbsp;&nbsp;
+      <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a>
+    </p>
+    <p style="margin-top:8px;">This tool is for estimation purposes. Results depend on your specific business and market conditions.</p>
+  </div>
+</footer>
+</body>
+</html>
